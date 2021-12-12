@@ -37,6 +37,20 @@
       font-size: 9vw;
     }
   }
+  #about{
+    .container{
+      .col-2{
+        img{
+          display: none;
+        }
+        .about-para{
+          img{
+            display: initial;
+          }
+        }
+      }
+    }
+  }
   #tools{
     .container{
       .items{

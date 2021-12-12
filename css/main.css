@@ -113,19 +113,27 @@
 }
 #about .container .col-2 {
   display: flex;
+  margin-top: 10px;
   align-items: flex-start;
+  justify-content: center;
 }
 #about .container .col-2 img {
-  width: 40%;
+  width: 20%;
+  z-index: 5;
 }
 #about .container .col-2 .about-para {
-  max-height: 300px;
-  overflow: auto;
-  transition: 4s;
+  background-color: #5b5b5b;
+  box-shadow: 4px 4px 4px #000;
+  padding: 15px;
+  margin-left: -2px;
+  position: relative;
 }
 #about .container .col-2 .about-para p {
   transition: 4s;
   font-size: 25px;
+}
+#about .container .col-2 .about-para p span {
+  text-decoration: underline;
 }
 
 .first,
@@ -489,6 +497,13 @@ main .container h1 {
 
   #navigation p {
     font-size: 9vw;
+  }
+
+  #about .container .col-2 img {
+    display: none;
+  }
+  #about .container .col-2 .about-para img {
+    display: initial;
   }
 
   #tools .container .items .item {
