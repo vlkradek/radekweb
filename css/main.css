@@ -22,6 +22,7 @@
   width: 200px;
   height: 200px;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 #home .card .image img {
   width: 100%;
@@ -33,6 +34,7 @@
   animation-delay: 1s;
   overflow: hidden;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 #home .card .image .overlay {
   position: absolute;
@@ -46,6 +48,7 @@
   transition: 0.5s;
   cursor: pointer;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 #home .card .image .overlay p {
   position: absolute;
@@ -54,18 +57,22 @@
   transform: translateX(-50%);
   transition: 0.5s;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 #home .card .image:hover img {
   transform: rotate(360deg);
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 #home .card .image:hover .overlay {
   opacity: 0.6;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 #home .card .image:hover .overlay p {
   top: 50%;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 #home .card h3 {
   font-size: 50px;
