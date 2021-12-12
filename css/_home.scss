@@ -13,14 +13,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    user-select: none;
-
     .image{
       position: relative;
       width: 200px;
       height: 200px;
-      user-select: none;
-      -webkit-tap-highlight-color: transparent;
       img{
         width: 100%;
         height: 100%;
@@ -30,8 +26,6 @@
         animation-duration: 1s;
         animation-delay: 1s;
         overflow: hidden;
-        user-select: none;
-        -webkit-tap-highlight-color: transparent;
 
       }
       .overlay{
@@ -45,8 +39,6 @@
         border-radius: 9999px;
         transition: 0.5s;
         cursor: pointer;
-        user-select: none;
-        -webkit-tap-highlight-color: transparent;
 
 
         p{
@@ -55,32 +47,16 @@
           left: 50%;
           transform: translateX(-50%);
           transition: 0.5s;
-          user-select: none;
-          -webkit-tap-highlight-color: transparent;
-
-
         }
       }
       &:hover{
         img{
           transform: rotate(360deg);
-          user-select: none;
-          -webkit-tap-highlight-color: transparent;
-
-
         }
         .overlay{
           opacity: 0.6;
-          user-select: none;
-          -webkit-tap-highlight-color: transparent;
-
-
           p{
             top: 50%;
-            user-select: none;
-            -webkit-tap-highlight-color: transparent;
-
-
           }
         }
       }

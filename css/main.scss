@@ -16,6 +16,7 @@ $dark-gray: #2F2F2F;
   box-sizing: border-box;
   font-family: $main-font;
   color: $light-gray;
+  -webkit-tap-highlight-color: transparent;
 }
 *::-webkit-scrollbar{
   display: none;
