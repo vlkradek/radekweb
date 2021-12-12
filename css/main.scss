@@ -33,23 +33,13 @@ body{
 #blackout-right{
   left: 50%;
   img{
-    position: absolute;
     right: 90%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20%;
-    border-radius: 50%;
   }
 }
 #blackout-left {
   right: 50%;
   img{
-    position: absolute;
     left: 90%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20%;
-    border-radius: 50%;
   }
 }
 #blackout-left,
@@ -62,6 +52,13 @@ body{
   overflow: hidden;
   top: 0;
   transition: 0.7s;
+  img{
+    position: absolute;
+    width: 20%;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 #navigation{
   height: 100vh;

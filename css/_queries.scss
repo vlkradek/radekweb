@@ -16,6 +16,22 @@
   *{
     user-select: none;
   }
+  #blackout-left,
+  #blackout-right{
+    img{
+      width: 40%;
+    }
+  }
+  #blackout-right{
+    img{
+      right: 80%;
+    }
+  }
+  #blackout-left{
+    img{
+      left: 80%;
+    }
+  }
   #navigation{
     p{
       font-size: 9vw;
@@ -45,6 +61,17 @@
   }
 }
 @media only screen and (max-width: 500px) {
+  #home{
+    .card{
+      img,
+      h3,
+      #title,
+      #title2{
+        animation-name: none;
+        pointer-events: none;
+      }
+    }
+  }
   #tools{
     .container{
       .items{
