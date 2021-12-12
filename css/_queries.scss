@@ -1,14 +1,68 @@
+@media only screen and (max-width: 1500px) {
+  body{
+    .row{
+      width: 80%;
+    }
+  }
+}
 @media only screen and (max-width: 1200px) {
   #navigation{
     p{
       font-size: 7vw;
     }
   }
+  #portfolio{
+
+  }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 770px) {
+  *{
+    user-select: none;
+  }
   #navigation{
     p{
       font-size: 9vw;
+    }
+  }
+  #tools{
+    .container{
+      .items{
+        .item{
+          flex-direction: column;
+          text-align: center;
+          margin-top: 40px;
+        }
+        .css,
+        .sass{
+          img{
+            order: 1;
+          }
+          .item-text{
+            text-align: center;
+            order: 2;
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  #tools{
+    .container{
+      .items{
+        .item{
+          .item-text{
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+  section{
+    .first,
+    .second{
+      display: none;
     }
   }
 }

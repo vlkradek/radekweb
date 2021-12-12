@@ -205,7 +205,7 @@
 #portfolio .container #slideshow .slider .sliding {
   display: flex;
   justify-content: space-between;
-  width: 200%;
+  width: 100%;
   height: 100%;
   transition: 1s;
 }
@@ -301,6 +301,7 @@
 
 body {
   max-width: 100vw;
+  height: 100vh;
   overflow: hidden;
 }
 body .row {
@@ -338,7 +339,7 @@ body .row {
   height: 100vh;
   background-color: #1E1E1E;
   z-index: 555555;
-  position: absolute;
+  position: fixed;
   overflow: hidden;
   top: 0;
   transition: 0.7s;
@@ -459,13 +460,48 @@ main .container h1 {
   font-size: 6vw;
 }
 
+@media only screen and (max-width: 1500px) {
+  body .row {
+    width: 80%;
+  }
+}
 @media only screen and (max-width: 1200px) {
   #navigation p {
     font-size: 7vw;
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 770px) {
+  * {
+    user-select: none;
+  }
+
   #navigation p {
     font-size: 9vw;
+  }
+
+  #tools .container .items .item {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+  }
+  #tools .container .items .css img,
+#tools .container .items .sass img {
+    order: 1;
+  }
+  #tools .container .items .css .item-text,
+#tools .container .items .sass .item-text {
+    text-align: center;
+    order: 2;
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #tools .container .items .item .item-text {
+    width: 90%;
+  }
+
+  section .first,
+section .second {
+    display: none;
   }
 }
