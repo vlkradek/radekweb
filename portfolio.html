@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='https://css.gg/menu.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body onload="loadPage()">
+<div id="blackout-left">
+    <img src="img/icon.png" alt="">
+</div>
+<div id="blackout-right">
+    <img src="img/icon.png" alt="">
+</div>
+<div id="navigation"></div>
+<section id="sec">
+    <header>
+        <div class="nav row">
+            <div onclick="jump('home.html')">
+                <i class="ri-home-4-line"></i>
+                <span>home</span>
+            </div>
+            <div class="hamburger" id="navButton">
+                <div class="clicked">
+                    <div id="first"></div>
+                    <div id="second"></div>
+                    <div id="third"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="portfolio">
+        <div class="container row">
+            <h1>portfolio</h1>
+            <div id="slideshow">
+                <span id="left"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(202, 202, 202, 1);"><path d="m5 12 7 6v-5h6v-2h-6V6z"></path></svg></span>
+                <div class="slider">
+                    <div class="sliding" id="sliding">
+                        <div class="slide">
+                            <div class="hovered">
+                                <a href="https://gibugym.netlify.app/" target="_blank" class="overlay">
+                                    <h6>Gibu Gym</h6>
+                                    <p>gibugym.netlify.app</p>
+                                </a>
+                                <a href="#">
+                                    <img src="img/chrome_5PAXtI5p1h.png" alt="">
+                                </a>
+                            </div>
+                            <div class="hovered">
+                                <div class="overlay">
+                                    <h6>[website name]</h6>
+                                    <p>[domain]</p>
+                                </div>
+                                <a href="https://gibugym.netlify.app/" target="_blank">
+                                    <img src="img/Untitled.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="hovered">
+                                <div class="overlay">
+                                    <h6>[website name]</h6>
+                                    <p>[domain]</p>
+                                </div>
+                                <a href="#">
+                                    <img src="img/Untitled.png" alt="">
+                                </a>
+                            </div>
+                            <div class="hovered">
+                                <div class="overlay">
+                                    <h6>[website name]</h6>
+                                    <p>[domain]</p>
+                                </div>
+                                <a href="#">
+                                    <img src="img/Untitled.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span id="right"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(202, 202, 202, 1);"><path d="m19 12-7-6v5H6v2h6v5z"></path></svg></span>
+            </div>
+        </div>
+    </main>
+</section>
+<script src="script.js"></script>
+</body>
+</html>

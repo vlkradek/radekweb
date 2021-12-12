@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='https://css.gg/menu.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body id="body" style="overflow-y: auto" onload="loadPage()">
+<div id="blackout-left">
+    <img src="img/icon.png" alt="">
+</div>
+<div id="blackout-right">
+    <img src="img/icon.png" alt="">
+</div>
+<div id="navigation"></div>
+<section id="sec" style="height: initial">
+    <header id="header">
+        <div class="nav row">
+            <div onclick="jump('home.html')">
+                <i class="ri-home-4-line"></i>
+                <span>home</span>
+            </div>
+            <div class="hamburger" id="navButton">
+                <div class="clicked">
+                    <div id="first"></div>
+                    <div id="second"></div>
+                    <div id="third"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+        <p class="first">scroll&nbsp;down<i class='bx bxs-right-arrow-alt'></i></p>
+        <p class="second">scroll&nbsp;down<i class='bx bxs-right-arrow-alt'></i></p>
+    <main id="tools">
+        <div class="container row">
+            <h1>tools, which I use</h1>
+            <div class="items">
+                <div class="item">
+                    <img src="img/icons8-html-5.svg" alt="">
+                    <div class="item-text">
+                        <h3>HTML</h3>
+                        <p>HTML, in full hypertext markup language, a formatting system for displaying material retrieved over the Internet.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-text">
+                        <h3>css</h3>
+                        <p>Cascading Style Sheets. An extension to HTML which are most often used to set default styles so that the equivalent HTML code does not need to be retyped.</p>
+                    </div>
+                    <img src="img/icons8-css3.svg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/icons8-javascript.svg" alt="">
+                    <div class="item-text">
+                        <h3>JAVASCRIPT</h3>
+                        <p>A powerful, object-based, interpreted scripting language, most commonly embedded directly into HTML web pages to manage client-side interaction.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-text">
+                        <h3>Sass</h3>
+                        <p>A CSS preprocessor is a scripting language that extends CSS by allowing developers to write code in one language and then compile it into CSS.</p>
+                    </div>
+                    <img src="img/icons8-sass-avatar.svg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/icons8-figma.svg" alt="">
+                    <div class="item-text">
+                        <h3>Figma</h3>
+                        <p>Figma is a web-based graphics editing and user interface design app. You can use it to do all kinds of graphic design work from wireframing websites, designing mobile app interfaces, and much more</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+<script src="script.js"></script>
+</body>
+</html>

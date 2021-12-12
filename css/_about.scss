@@ -1,0 +1,23 @@
+#about{
+  .container {
+    font-size: 4vw;
+    .col-2 {
+      display: flex;
+      align-items: flex-start;
+      img {
+        width: 40%;
+      }
+
+      .about-para {
+        max-height: 300px;
+        overflow: auto;
+        transition: 4s;
+
+        p {
+          transition: 4s;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}

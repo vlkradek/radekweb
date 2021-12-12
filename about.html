@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='https://css.gg/menu.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body onload="loadPage()">
+<div id="blackout-left">
+    <img src="img/icon.png" alt="">
+</div>
+<div id="blackout-right">
+    <img src="img/icon.png" alt="">
+</div>
+<div id="navigation"></div>
+<section>
+    <header>
+        <div class="nav row">
+            <div onclick="jump('home.html')">
+                <i class="ri-home-4-line"></i>
+                <span>home</span>
+            </div>
+            <div class="hamburger" id="navButton">
+                <div class="clicked">
+                    <div id="first"></div>
+                    <div id="second"></div>
+                    <div id="third"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="about">
+        <div class="container row">
+            <h1>about me</h1>
+            <div class="col-2">
+                <div class="about-para" id="about-para">
+                    <p id="para">Hey, I am Radek, young Frontend developer and web designer from the Czech republic. I'm working with HTML, CSS, Javascript and designing tool Figma. I have one year of experience and you can check my portfolio full of my projects.</p>
+                </div>
+                <img src="img/undraw_developer_activity_re_39tg.svg" alt="">
+            </div>
+        </div>
+    </main>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
