@@ -15,11 +15,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 #home .card .image {
   position: relative;
   width: 200px;
   height: 200px;
+  user-select: none;
 }
 #home .card .image img {
   width: 100%;
@@ -30,6 +32,7 @@
   animation-duration: 1s;
   animation-delay: 1s;
   overflow: hidden;
+  user-select: none;
 }
 #home .card .image .overlay {
   position: absolute;
@@ -42,6 +45,7 @@
   border-radius: 9999px;
   transition: 0.5s;
   cursor: pointer;
+  user-select: none;
 }
 #home .card .image .overlay p {
   position: absolute;
@@ -49,15 +53,19 @@
   left: 50%;
   transform: translateX(-50%);
   transition: 0.5s;
+  user-select: none;
 }
 #home .card .image:hover img {
   transform: rotate(360deg);
+  user-select: none;
 }
 #home .card .image:hover .overlay {
   opacity: 0.6;
+  user-select: none;
 }
 #home .card .image:hover .overlay p {
   top: 50%;
+  user-select: none;
 }
 #home .card h3 {
   font-size: 50px;
