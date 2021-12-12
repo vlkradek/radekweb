@@ -6,15 +6,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 $main-font: 'Montserrat', sans-serif;
-$main-color: #cacaca;
-
+$light-gray: #cacaca;
+$light-black: #1E1E1E;
+$dark-gray: #2F2F2F;
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: $main-font;
-  color: $main-color;
+  color: $light-gray;
 }
 *::-webkit-scrollbar{
   display: none;
@@ -53,7 +54,7 @@ body{
 #blackout-right{
   width: 100vw;
   height: 100vh;
-  background-color: #1E1E1E;
+  background-color: $light-black;
   z-index: 555555;
   position: absolute;
   overflow: hidden;
@@ -63,7 +64,7 @@ body{
 #navigation{
   height: 100vh;
   width: 100vw;
-  background-color: #1E1E1E;
+  background-color: $light-black;
   position: fixed;
   left: 100%;
   top: 0;
@@ -74,7 +75,7 @@ body{
   flex-direction: column;
   transition: 0.8s;
   p{
-    color: #cacaca;
+    color: $light-gray;
     font-size: 5vw;
     text-align: center;
     display: flex;
@@ -95,7 +96,7 @@ body{
   }
 }
 section{
-  background-color: #2F2F2F;
+  background-color: $dark-gray;
   height: 100vh;
   position: relative;
   padding-left: 0;
@@ -136,7 +137,7 @@ header{
         bottom: -20%;
       }
       i{
-        color: #cacaca;
+        color: $light-gray;
         font-size: 50px;
         transition: 0.2s;
         width: 100%;
@@ -150,7 +151,7 @@ header{
       div {
         width: 100%;
         height: 13%;
-        background-color: #cacaca;
+        background-color: $light-gray;
         position: absolute;
         border-radius: 9999px;
       }
@@ -179,3 +180,4 @@ main{
     }
   }
 }
+@import "queries";
