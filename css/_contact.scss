@@ -1,0 +1,11 @@
+#contact{
+  .container{
+    .col-2{
+      display: flex;
+      flex-basis: 50%;
+    }
+    .col-2 > *{
+      flex-basis: 50%;
+    }
+  }
+}

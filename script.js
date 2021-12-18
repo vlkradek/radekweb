@@ -21,7 +21,7 @@ let navigation = document.getElementById('navigation')
 navigation.innerHTML = `<p class="navItem" onclick='jump("about.html")'><i class='bx bx-chevron-right'></i>about me</p>
                         <p class="navItem" onclick='jump("tools.html")'><i class='bx bx-chevron-right'></i>tools</p>
                         <p class="navItem" onclick='jump("portfolio.html")'><i class='bx bx-chevron-right'></i>portfolio</p>
-                        <p class="navItem" onclick='jump("home.html")'><i class='bx bx-chevron-right'></i>contact me</p>`
+                        <p class="navItem" onclick='jump("contact.html")'><i class='bx bx-chevron-right'></i>contact me</p>`
 
 
 
@@ -60,12 +60,41 @@ navButton.onclick = function (){
 let right = document.getElementById('right')
 let left = document.getElementById('left')
 let sliding = document.getElementById('sliding')
+let pathLeft = document.getElementById('path-left')
+let pathRight = document.getElementById('path-right')
+let counter  = 0
+let counterMax  = 100
+let counterMin  = 0
 
-right.onclick = function (){
-    sliding.style.marginLeft = '-100%'
+const mediaQuery = window.matchMedia('(max-width: 1200px)')
+// Check if the media query is true
+if (mediaQuery.matches) {
+    // Then trigger an alert
+    counterMax = 300
 }
-left.onclick = function (){
-    sliding.style.marginLeft = '0%'
-}
+pathRight.style.transition = '0.5s'
+pathLeft.style.transition = '0.5s'
+pathLeft.style.fill = '#7c7c7c'
 
+
+right.onclick = function goRight(){
+    pathLeft.style.fill = '#cacaca'
+    if(counter < counterMax){
+        counter = counter + 100;
+    }
+    sliding.style.marginLeft = '-' + counter + '%'
+    if (counter == counterMax){
+        pathRight.style.fill = '#7c7c7c'
+    }
+}
+left.onclick = function goLeft() {
+    pathRight.style.fill = '#cacaca'
+    if (counter > 0) {
+        counter = counter - 100;
+    }
+    sliding.style.marginLeft = '-' + counter + '%'
+    if (counter == counterMin){
+        pathLeft.style.fill = '#7c7c7c'
+    }
+}
 

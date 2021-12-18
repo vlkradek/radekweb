@@ -6,14 +6,14 @@
       justify-content: center;
       align-items: center;
       .slider{
-        width: 80%;
+        width: 100%;
         overflow: hidden;
         //border: 2px solid red;
         border-radius: 10px;
         .sliding{
           display: flex;
           justify-content: space-between;
-          width: 100%;
+          width: 200%;
           height: 100%;
           transition: 1s;
           .slide{
@@ -78,7 +78,8 @@
         place-items: center;
         border: 4px solid #cacaca;
         svg{
-          font-size: 25px;
+          width: 40px;
+          height: 40px;
         }
 
       }

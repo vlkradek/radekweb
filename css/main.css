@@ -206,14 +206,14 @@
   align-items: center;
 }
 #portfolio .container #slideshow .slider {
-  width: 80%;
+  width: 100%;
   overflow: hidden;
   border-radius: 10px;
 }
 #portfolio .container #slideshow .slider .sliding {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 200%;
   height: 100%;
   transition: 1s;
 }
@@ -274,7 +274,8 @@
   border: 4px solid #cacaca;
 }
 #portfolio .container #slideshow span svg {
-  font-size: 25px;
+  width: 40px;
+  height: 40px;
 }
 #portfolio .container #slideshow span:hover svg {
   animation-name: arrow;
@@ -295,6 +296,14 @@
     transform: rotate(0deg);
   }
 }
+#contact .container .col-2 {
+  display: flex;
+  flex-basis: 50%;
+}
+#contact .container .col-2 > * {
+  flex-basis: 50%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -463,6 +472,9 @@ header .nav .clicked #third {
   transition: 0.4s;
 }
 
+main .container {
+  padding-top: 50px;
+}
 main .container h1 {
   font-size: 6vw;
 }
@@ -475,6 +487,17 @@ main .container h1 {
 @media only screen and (max-width: 1200px) {
   #navigation p {
     font-size: 7vw;
+  }
+
+  #portfolio .container {
+    width: 95%;
+  }
+  #portfolio .container #slideshow .slider .sliding {
+    width: 400%;
+  }
+  #portfolio .container #slideshow span svg {
+    width: 45px;
+    height: 45px;
   }
 }
 @media only screen and (max-width: 770px) {
@@ -497,6 +520,11 @@ main .container h1 {
 
   #navigation p {
     font-size: 9vw;
+  }
+
+  main .container h1 {
+    font-size: 8vw;
+    text-align: center;
   }
 
   #about .container .col-2 img {
