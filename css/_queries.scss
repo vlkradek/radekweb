@@ -99,6 +99,30 @@
       }
     }
   }
+  #contact{
+    .container{
+      .contact-box{
+        margin-top: 40px;
+        flex-direction: column;
+        .fiverr{
+          p{
+            display: none;
+          }
+        }
+        .or{
+          flex-direction: row;
+          margin: 40px;
+          hr{
+            height: 0.5px;
+            width: 100px;
+          }
+        }
+        form{
+          width: 90%;
+        }
+      }
+    }
+  }
 }
 @media only screen and (max-width: 500px) {
   #home{

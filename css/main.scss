@@ -52,7 +52,7 @@ body{
   position: fixed;
   overflow: hidden;
   top: 0;
-  transition: 0.7s;
+  transition: 0.5s;
   img{
     position: absolute;
     width: 20%;
@@ -175,7 +175,7 @@ header{
 }
 main{
   .container{
-    padding-top: 50px;
+    padding-top: 30px;
     h1{
       font-size: 6vw;
     }

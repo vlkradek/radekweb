@@ -1,11 +1,93 @@
 #contact{
   .container{
-    .col-2{
+    .contact-box{
       display: flex;
-      flex-basis: 50%;
+      align-items: center;
+      justify-content: space-between;
+      //border: 2px solid red;
+      .fiverr{
+        position: relative;
+        //padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        height: 100%;
+        a{
+          border-radius: 9999px;
+          overflow: hidden;
+          svg{
+            padding: 30px;
+            //margin: 20px;
+            border-radius: 9999px;
+            //display: none;
+            transition: 0.5s;
+            background-color: transparentize(#cacaca, 0.9);
+          }
+        }
+        a:hover{
+          svg{
+            background-color: #09A62D;
+          }
+        }
+        p{
+          position: absolute;
+          top: 110%;
+          font-size: 14px;
+          color: transparentize(#cacaca, 0.6);
+        }
+      }
+      .or{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        //justify-content: center;
+        color: #cacaca;
+        margin: 0 10px;
+        hr{
+          height: 100px;
+          width: .5px;
+          border: none;
+          background-color: #cacaca;
+        }
+        span{
+          padding: 8px;
+        }
+      }
+      form{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        //border: 2px solid violet;#
+        gap: 10px;
+        input,
+        textarea{
+          width: 100%;
+          outline: none;
+          padding: 15px;
+          background-color: transparentize(#cacaca, 0.9);
+          border: none;
+        }
+        textarea{
+          max-width: 100%;
+          resize: none;
+        }
+        .info{
+          gap: 10px;
+          display: flex;
+        }
+        input[type='submit']{
+          transition: 0.2s;
+          cursor: pointer;
+          &:hover{
+          background-color: transparentize(#cacaca, 0.95);
+          }
+        }
+      }
     }
     .col-2 > *{
-      flex-basis: 50%;
+      //flex-basis: 50%;
     }
   }
 }
