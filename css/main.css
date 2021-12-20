@@ -1,3 +1,4 @@
+@import url("http://fonts.cdnfonts.com/css/progress-personal-use");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 #home {
   display: flex;
@@ -200,49 +201,133 @@
 #tools .items .item:nth-child(4) .item-text {
   text-align: right;
 }
-#portfolio .container #slideshow {
-  margin-top: 50px;
-  display: flex;
+.portfolio-overflow {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #5C48D2;
+  z-index: 5;
+  border-radius: 9999px;
+  transition: 3s;
+}
+.portfolio-overflow svg {
+  border: 5px solid #cacaca;
+  padding: 10px 10px 10px 12px;
+  border-radius: 9999px;
+  margin-top: 30px;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  position: absolute;
+  transition: 0.5s;
+  opacity: 1;
+}
+.portfolio-overflow svg:hover {
+  border: 5px solid #5C48D2;
+  background-color: #5C48D2;
+}
+
+#close-portfolio {
+  position: absolute;
+  z-index: 5555555;
+  right: 0;
+  top: 0;
+  display: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#slideshow {
+  z-index: 5555555;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   justify-content: center;
   align-items: center;
+  font-size: 3vw;
+  display: none;
+  opacity: 0;
+  transition: 1s;
 }
-#portfolio .container #slideshow .slider {
+#slideshow .slider {
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
+  position: relative;
 }
-#portfolio .container #slideshow .slider .sliding {
+#slideshow .slider .right,
+#slideshow .slider .left {
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  z-index: 120;
+  top: 0;
+  opacity: 0;
+  transition: 0.6s;
+}
+#slideshow .slider .right:hover,
+#slideshow .slider .left:hover {
+  opacity: 1;
+}
+#slideshow .slider .right span,
+#slideshow .slider .left span {
+  color: black;
+  z-index: 555555555555;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#slideshow .slider .left {
+  left: 0;
+  background: linear-gradient(to right, rgba(56, 56, 56, 0.8), rgba(0, 0, 0, 0));
+}
+#slideshow .slider .left span {
+  left: 0;
+}
+#slideshow .slider .right {
+  right: 0;
+  background: linear-gradient(to left, rgba(56, 56, 56, 0.8), rgba(0, 0, 0, 0));
+}
+#slideshow .slider .right span {
+  right: 0;
+}
+#slideshow .slider .sliding {
   display: flex;
   justify-content: space-between;
-  width: 200%;
+  width: 400%;
   height: 100%;
-  transition: 1s;
+  transition: 0.7s;
 }
-#portfolio .container #slideshow .slider .sliding .slide {
+#slideshow .slider .sliding .slide {
   width: 100%;
   display: flex;
   height: 100%;
   justify-content: space-between;
 }
-#portfolio .container #slideshow .slider .sliding .slide .hovered {
-  width: 49%;
+#slideshow .slider .sliding .slide .hovered {
+  width: 100%;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
 }
-#portfolio .container #slideshow .slider .sliding .slide .hovered a {
+#slideshow .slider .sliding .slide .hovered a {
   height: 100%;
   width: 100%;
   z-index: 800;
   text-decoration: none;
 }
-#portfolio .container #slideshow .slider .sliding .slide .hovered a img {
+#slideshow .slider .sliding .slide .hovered a img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
-#portfolio .container #slideshow .slider .sliding .slide .hovered .overlay {
+#slideshow .slider .sliding .slide .hovered .overlay {
   position: absolute;
   z-index: 900;
   top: 100%;
@@ -257,30 +342,21 @@
   align-items: center;
   justify-content: center;
 }
-#portfolio .container #slideshow .slider .sliding .slide .hovered .overlay h6 {
+#slideshow .slider .sliding .slide .hovered .overlay h6 {
   font-size: 20px;
 }
-#portfolio .container #slideshow .slider .sliding .slide .hovered:hover .overlay {
+#slideshow .slider .sliding .slide .hoveredd:hover .overlay {
   top: 0;
 }
-#portfolio .container #slideshow .slider .sliding .slide:first-child {
+#slideshow .slider .sliding .slide:first-child {
   margin-right: 20px;
 }
-#portfolio .container #slideshow span {
-  margin: 15px;
-  cursor: pointer;
-  border-radius: 9999px;
-  display: grid;
-  place-items: center;
-  border: 4px solid #cacaca;
+
+#portfolio .container {
+  text-align: center;
 }
-#portfolio .container #slideshow span svg {
-  width: 40px;
-  height: 40px;
-}
-#portfolio .container #slideshow span:hover svg {
-  animation-name: arrow;
-  animation-duration: 1s;
+#portfolio .container p {
+  padding-top: 25px;
 }
 
 @keyframes arrow {
@@ -375,6 +451,7 @@
 #contact .container .contact-box form input[type=submit]:hover {
   background-color: rgba(202, 202, 202, 0.05);
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -391,7 +468,9 @@
 body {
   max-width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  background-color: #2F2F2F;
+  position: relative;
 }
 body .row {
   width: 70%;
@@ -450,20 +529,49 @@ body .row {
   color: #cacaca;
   font-size: 5vw;
   text-align: center;
+  justify-content: center;
   display: flex;
   align-items: center;
   text-decoration: none;
   font-weight: 600;
   cursor: pointer;
+  width: 50%;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 #navigation p i {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0s;
 }
-#navigation p:not(:last-child) {
-  margin-bottom: 20px;
+#navigation p::after {
+  height: 100%;
+  left: -35%;
+  top: 0;
+  transform: skew(50deg);
+  transition-duration: 0.6s;
+  background-color: #5c48d2;
+  transform-origin: top left;
+  position: absolute;
+  content: "";
+  z-index: -1;
+  width: 0;
 }
 #navigation p:hover i {
   display: initial;
+  opacity: 1;
+  animation-name: code-blink;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+}
+#navigation p:hover::after {
+  height: 100%;
+  width: 135%;
 }
 
 section {
@@ -550,6 +658,17 @@ main .container h1 {
   font-size: 6vw;
 }
 
+@keyframes code-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @media only screen and (max-width: 1500px) {
   body .row {
     width: 80%;

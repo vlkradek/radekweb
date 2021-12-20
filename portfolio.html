@@ -9,7 +9,7 @@
     <link href='https://css.gg/menu.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <title>Document</title>
+    <title>portfolio - Frontend Developer</title>
 </head>
 <body onload="loadPage()">
 <div id="blackout-left">
@@ -19,6 +19,71 @@
     <img src="img/icon.png" alt="">
 </div>
 <div id="navigation"></div>
+<div id="portfolio-overflow" class="portfolio-overflow">
+    <svg id="playbutton" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+         width="55" height="55"
+         viewBox="0 0 172 172"
+         style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-size="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#cacaca"><path d="M34.4,17.2c-3.16643,0 -5.73333,2.5669 -5.73333,5.73333c-0.00001,0.00747 -0.00001,0.01493 0,0.0224v63.04427v63.04427c-0.00001,0.00746 -0.00001,0.01493 0,0.02239c0,3.16643 2.5669,5.73333 5.73333,5.73333c1.19346,-0.00345 2.3561,-0.37925 3.32578,-1.075l0.0112,0.0112l113.71485,-62.52917c2.03773,-0.93223 3.34559,-2.96619 3.34817,-5.20703c0.00115,-2.30642 -1.37987,-4.38898 -3.50495,-5.28542l-113.55807,-62.45078h-0.0112c-0.97102,-0.69177 -2.13354,-1.06362 -3.32578,-1.0638z"></path></g></g></svg>
+
+</div>
+<div id="close-portfolio">
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+         width="50" height="50"
+         viewBox="0 0 50 50"
+         style=" fill:#cacaca;"><path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"></path></svg>
+</div>
+<div id="slideshow">
+    <div class="slider">
+        <div class="left">
+            <span id="left">L</span>
+        </div>
+        <div class="right">
+            <span id="right">R</span>
+        </div>
+        <div class="sliding" id="sliding">
+            <div class="slide">
+                <div class="hovered">
+                    <div class="overlay">
+                        <h6>Gibu Gym</h6>
+                        <p>gibugym.netlify.app</p>
+                    </div>
+                    <a href="#">
+                        <img src="img/chrome_5PAXtI5p1h.png" alt="">
+                    </a>
+                </div>
+                <div class="hovered">
+                    <div class="overlay">
+                        <h6>[website name]</h6>
+                        <p>[domain]</p>
+                    </div>
+                    <a href="https://gibugym.netlify.app/" target="_blank">
+                        <img src="img/Untitled.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="hovered">
+                    <div class="overlay">
+                        <h6>[website name]</h6>
+                        <p>[domain]</p>
+                    </div>
+                    <a href="#">
+                        <img src="img/Untitled.png" alt="">
+                    </a>
+                </div>
+                <div class="hovered">
+                    <div class="overlay">
+                        <h6>[website name]</h6>
+                        <p>[domain]</p>
+                    </div>
+                    <a href="#">
+                        <img src="img/Untitled.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <section id="sec">
     <header>
         <div class="nav row">
@@ -38,54 +103,7 @@
     <main id="portfolio">
         <div class="container row">
             <h1>portfolio</h1>
-            <div id="slideshow">
-                <span id="left"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(202, 202, 202, 1);"><path id="path-left" d="m5 12 7 6v-5h6v-2h-6V6z"></path></svg></span>
-                <div class="slider">
-                    <div class="sliding" id="sliding">
-                        <div class="slide">
-                            <div class="hovered">
-                                <a href="https://gibugym.netlify.app/" target="_blank" class="overlay">
-                                    <h6>Gibu Gym</h6>
-                                    <p>gibugym.netlify.app</p>
-                                </a>
-                                <a href="#">
-                                    <img src="img/chrome_5PAXtI5p1h.png" alt="">
-                                </a>
-                            </div>
-                            <div class="hovered">
-                                <div class="overlay">
-                                    <h6>[website name]</h6>
-                                    <p>[domain]</p>
-                                </div>
-                                <a href="https://gibugym.netlify.app/" target="_blank">
-                                    <img src="img/Untitled.png" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="hovered">
-                                <div class="overlay">
-                                    <h6>[website name]</h6>
-                                    <p>[domain]</p>
-                                </div>
-                                <a href="#">
-                                    <img src="img/Untitled.png" alt="">
-                                </a>
-                            </div>
-                            <div class="hovered">
-                                <div class="overlay">
-                                    <h6>[website name]</h6>
-                                    <p>[domain]</p>
-                                </div>
-                                <a href="#">
-                                    <img src="img/Untitled.png" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <span id="right"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(202, 202, 202, 1);"><path id="path-right" d="m19 12-7-6v5H6v2h6v5z"></path></svg></span>
-            </div>
+            <p>Take a look at my previous projects</p>
         </div>
     </main>
 </section>

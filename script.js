@@ -57,44 +57,92 @@ navButton.onclick = function (){
 }
 
 
-let right = document.getElementById('right')
-let left = document.getElementById('left')
-let sliding = document.getElementById('sliding')
-let pathLeft = document.getElementById('path-left')
-let pathRight = document.getElementById('path-right')
-let counter  = 0
-let counterMax  = 100
-let counterMin  = 0
+// let right = document.getElementById('right')
+// let left = document.getElementById('left')
+// let sliding = document.getElementById('sliding')
+// let pathLeft = document.getElementById('path-left')
+// let pathRight = document.getElementById('path-right')
+// let counter  = 0
 
-const mediaQuery = window.matchMedia('(max-width: 1200px)')
-// Check if the media query is true
-if (mediaQuery.matches) {
-    // Then trigger an alert
-    counterMax = 300
+// right.onclick = function goRight(){
+//     if(counter < 300){
+//         counter = counter + 100;
+//     }
+//     sliding.style.marginLeft = '-' + counter + '%'
+// }
+// left.onclick = function goLeft() {
+//     if (counter > 0) {
+//         counter = counter - 100;
+//     }
+//     sliding.style.marginLeft = '-' + counter + '%'
+// }
+
+
+let playbutton = document.getElementById('playbutton')
+let portOverflow = document.getElementById('portfolio-overflow')
+let slideshow = document.getElementById('slideshow')
+let closeButton = document.getElementById('close-portfolio')
+
+let windowWidth = window.innerWidth + window.innerWidth / 2
+let windowHeight = window.innerHeight + window.innerHeight / 2
+
+console.log(windowWidth)
+
+if (windowHeight >= windowWidth){
+    playbutton.onclick = function (){
+        portOverflow.style.display = 'initial'
+        portOverflow.style.zIndex = '55555'
+        portOverflow.style.width = windowHeight + 'px'
+        portOverflow.style.height = windowHeight + 'px'
+        slideshow.style.display = 'flex'
+        closeButton.style.display = 'initial'
+        playbutton.style.opacity = '0'
+        setTimeout(function (){
+            slideshow.style.opacity = '1'
+            closeButton.style.opacity = '1'
+        }, 2000)
+    }
+    closeButton.onclick = function (){
+        slideshow.style.opacity = '0'
+        closeButton.style.opacity = '0'
+        portOverflow.style.width = '5px'
+        portOverflow.style.height = '5px'
+        portOverflow.style.zIndex = '0'
+        setTimeout(function (){
+            playbutton.style.opacity = '1'
+            slideshow.style.display = 'none'
+        }, 2300)
+    }
+} else {
+    playbutton.onclick = function (){
+        portOverflow.style.display = 'initial'
+        portOverflow.style.zIndex = '55555'
+        portOverflow.style.width = windowWidth + 'px'
+        portOverflow.style.height = windowWidth + 'px'
+        slideshow.style.display = 'flex'
+        closeButton.style.display = 'initial'
+        playbutton.style.opacity = '0'
+        setTimeout(function (){
+            slideshow.style.opacity = '1'
+            closeButton.style.opacity = '1'
+        }, 2000)
+    }
+    closeButton.onclick = function (){
+        slideshow.style.opacity = '0'
+        closeButton.style.opacity = '0'
+        portOverflow.style.width = '5px'
+        portOverflow.style.height = '5px'
+        portOverflow.style.zIndex = '5'
+        setTimeout(function (){
+            playbutton.style.opacity = '1'
+            slideshow.style.display = 'none'
+        }, 2300)
+    }
 }
-pathRight.style.transition = '0.5s'
-pathLeft.style.transition = '0.5s'
-pathLeft.style.fill = '#7c7c7c'
 
 
-right.onclick = function goRight(){
-    pathLeft.style.fill = '#cacaca'
-    if(counter < counterMax){
-        counter = counter + 100;
-    }
-    sliding.style.marginLeft = '-' + counter + '%'
-    if (counter == counterMax){
-        pathRight.style.fill = '#7c7c7c'
-    }
-}
-left.onclick = function goLeft() {
-    pathRight.style.fill = '#cacaca'
-    if (counter > 0) {
-        counter = counter - 100;
-    }
-    sliding.style.marginLeft = '-' + counter + '%'
-    if (counter == counterMin){
-        pathLeft.style.fill = '#7c7c7c'
-    }
-}
 
+// portOverflow.addEventListener(function (){
+//     let windowWidth = window.innerWidth + 150
+//     console.log(windowWidth)
+// } )
